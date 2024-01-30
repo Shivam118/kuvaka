@@ -1,6 +1,16 @@
+"use client";
 import Image from "next/image";
+import { useGoogleLogin } from "@react-oauth/google";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => {
+      console.log("Success!");
+      router.push("home");
+    },
+  });
   return (
     <div className="w-screen h-screen flex flex-col md:flex-row justify-center items-center relative">
       <div className="w-full hidden md:flex md:w-1/2 bg-[#F3DE53] h-full justify-center items-center">
@@ -68,7 +78,7 @@ const page = () => {
           <hr className="w-1/4" />
         </div>
         <div className="w-full max-w-[280px] md:max-w-[450px] flex flex-row justify-evenly items-center">
-          <span className="w-12">
+          <span className="cursor-pointer w-12" onClick={() => login()}>
             <Image
               src="/assets/images/google.png"
               alt="login"
@@ -76,7 +86,7 @@ const page = () => {
               height={40}
             />
           </span>
-          <span className="w-12">
+          <span className="cursor-pointer w-12">
             <Image
               src="/assets/images/facebook.png"
               alt="login"
@@ -84,7 +94,7 @@ const page = () => {
               height={40}
             />
           </span>
-          <span className="w-12">
+          <span className="cursor-pointer w-12">
             <Image
               src="/assets/images/apple.png"
               alt="login"
@@ -102,4 +112,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

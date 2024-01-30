@@ -1,5 +1,6 @@
 import { Open_Sans, Oswald } from "next/font/google";
 import "./globals.css";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${openSans.variable} ${oswald.variable}`}>
-        {children}
+        <GoogleOAuthProvider clientId="249472884306-f7svq4q2qgeks5qfnp3vsi22gkr8720a.apps.googleusercontent.com">
+          {children}
+        </GoogleOAuthProvider>
       </body>
     </html>
   );
