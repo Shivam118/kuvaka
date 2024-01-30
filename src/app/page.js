@@ -7,7 +7,7 @@ const page = () => {
     <div className="w-screen bg-[#F9D326] bg-gradient-to-b from-[#F9D326] to-[#545454] font-openSans text-base">
       <div
         id="strip"
-        className="w-1/12 md:w-3/12 h-full fixed top-0 left-12 md:left-24 bg-[#545454]"
+        className="w-1/12 md:w-3/12 h-full fixed top-0 left-12 md:left-24 bg-[#545454] hidden md:block"
       />
       <navbar className="w-full flex flex-row justify-between items-center py-2 px-8 shadow-md shadow-[#FFF5]">
         <ul className="flex flex-row items-center">
@@ -45,7 +45,7 @@ const page = () => {
               alt={"circle"}
               width={150}
               height={150}
-              className="rounded-full absolute top-[450px] left-[420px]"
+              className="rounded-full absolute top-[450px] left-[420px] z-20"
             />
           </span>
           <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32699] w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2">
@@ -54,7 +54,7 @@ const page = () => {
               alt={"circle"}
               width={100}
               height={100}
-              className="rounded-full absolute top-[10px] left-[440px]"
+              className="rounded-full absolute top-[10px] left-[440px] z-20"
             />
           </span>
           <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326BB] w-[520px] h-[520px] -translate-x-1/2 -translate-y-1/2">
@@ -63,7 +63,7 @@ const page = () => {
               alt={"circle"}
               width={150}
               height={150}
-              className="rounded-full absolute -top-[100px] left-[180px]"
+              className="rounded-full absolute -top-[100px] left-[180px] z-20"
             />
           </span>
           <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326DD] w-[440px] h-[440px] -translate-x-1/2 -translate-y-1/2">
@@ -72,7 +72,7 @@ const page = () => {
               alt={"circle"}
               width={150}
               height={150}
-              className="rounded-full absolute top-[400px] left-[100px]"
+              className="rounded-full absolute top-[400px] left-[100px] z-20"
             />
           </span>
           <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326FF] w-[360px] h-[360px] -translate-x-1/2 -translate-y-1/2">
@@ -81,7 +81,7 @@ const page = () => {
               alt={"circle"}
               width={150}
               height={150}
-              className="rounded-full absolute top-[20px] -left-[100px]"
+              className="rounded-full absolute top-[20px] -left-[100px] z-20"
             />
           </span>
           <Image
@@ -90,7 +90,8 @@ const page = () => {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "100%" }}
+            style={{ width: "40%" }}
+            className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 z-30"
           />
         </div>
         <div className="w-full md:w-1/2 h-auto">
