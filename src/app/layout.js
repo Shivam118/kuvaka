@@ -1,7 +1,19 @@
-import { Inter } from "next/font/google";
+import { Open_Sans, Oswald } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weights: [300, 400, 500, 600, 700, 800],
+  styles: ["regular", "italic"],
+  variable: "--font-openSans",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weights: [200, 300, 400, 500, 600, 700, 800],
+  styles: ["regular", "italic"],
+  variable: "--font-oswald",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${openSans.variable} ${oswald.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

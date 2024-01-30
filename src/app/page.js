@@ -1,113 +1,195 @@
 import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div className="w-screen bg-[#F9D326] bg-gradient-to-b from-[#F9D326] to-[#545454] font-openSans text-base">
+      <div
+        id="strip"
+        className="w-3/12 h-full fixed top-0 left-24 bg-[#545454]"
+      />
+      <navbar className="w-full flex flex-row justify-between items-center py-2 px-8 shadow-md shadow-[#FFF5]">
+        <ul className="flex flex-row items-center">
+          <li className="bg-[#545454] mr-4 rounded-full">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/assets/images/deatox.png"
+              alt={"DEATOX"}
+              width={40}
+              height={40}
             />
-          </a>
+          </li>
+          <li className="text-white z-[10] mx-4">HOME</li>
+          <li className="text-white z-[10] mx-4">ABOUT</li>
+          <li className="text-white z-[10] mx-4">MEAL PLANS</li>
+          <li className="text-white z-[10] mx-4">WORKOUT ROUTINE</li>
+        </ul>
+        <div className="w-[200px] flex flex-row justify-between">
+          <button className="text-white">LOG IN</button>
+          <button className="text-[#545454] bg-white px-6 py-3">SIGN UP</button>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      </navbar>
+      <section className="w-full min-h-[800px] flex flex-row justify-center items-center px-28 z-10 py-6 relative">
+        <div className="w-1/2 relative -left-48 w-[350px] h-[350px]">
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32677] w-[680px] h-[680px] -translate-x-1/2 -translate-y-1/2"></span>
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32699] w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2"></span>
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326BB] w-[520px] h-[520px] -translate-x-1/2 -translate-y-1/2"></span>
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326DD] w-[440px] h-[440px] -translate-x-1/2 -translate-y-1/2"></span>
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326FF] w-[360px] h-[360px] -translate-x-1/2 -translate-y-1/2"></span>
+          <Image
+            src={"/assets/images/deatox.png"}
+            alt={"Deatox"}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%" }}
+          />
+        </div>
+        <div className="w-1/2 h-auto">
+          <h1 className="text-[64px] text-[#545454] font-oswald font-bold">
+            CHANGE YOUR HABITS
+          </h1>
+          <h1 className="text-[64px] text-[#545454] font-oswald font-bold mt-12">
+            CHANGE YOUR LIFE{" "}
+            <span className="text-white text-[36px]">WITH AI</span>
+          </h1>
+          <p className="text-[24px] font-openSans font-normal text-[#545454] mt-4">
+            Our AI-powered algorithm takes into consideration your goals,
+            dietary restrictions, food preferences, and fitness level to create
+            a comprehensive plan that optimizes your health and fitness journey.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <ul className="flex flex-row justify-between mt-4">
+            <li>✔ EASY ONBOARDING</li>
+            <li>✔ EASY ONBOARDING</li>
+            <li>✔ EASY ONBOARDING</li>
+          </ul>
+          <button className="text-white bg-[#545454] px-6 py-3 mt-6 text-[24px]">
+            TRY NOW
+          </button>
+        </div>
+      </section>
+      <section className="w-auto mx-28 relative z-10">
+        <h1 className="text-5xl font-oswald font-extralight text-[#F9D326] my-12">
+          FEATURES
+        </h1>
+        <div className="md:w-[800px] min-h-[669px] bg-white py-6 px-12 text-[#545454] flex flex-row flex-wrap">
+          <div className="w-1/2 border-l border-l-8 p-3 border-[#F9D326] border-b-0 border-t-0 border-r-0 mt-6">
+            <h3 className="w-full text-4xl font-oswald font-bold">
+              PERSONALISED RECOMMENDATIONS
+            </h3>
+            <p className="w-full font-light mt-3">
+              DEATOX uses AI to analyze user data such as age, gender, weight,
+              height, dietary preferences, and fitness goals to generate
+              personalized meal and fitness plans.
+            </p>
+          </div>
+          <div className="w-1/2 border-l border-l-8 border-b-0 border-t-0 border-r-0 p-3 border-[#F9D326] mt-6">
+            <h3 className="w-full text-4xl font-oswald font-bold">
+              PROGRESS TRACKING
+            </h3>
+            <p className="w-full font-light mt-3">
+              DEATOX allows you to track their progress towards their fitness
+              goals by tracking metrics such as weight, body fat percentage, and
+              workout intensity.
+            </p>
+          </div>
+          <div className="w-1/2 border-l border-l-8 border-b-0 border-t-0 border-r-0 p-3 border-[#F9D326] mt-6">
+            <h3 className="w-full text-4xl font-oswald font-bold">
+              MEAL PLANNING
+            </h3>
+            <p className="w-full font-light mt-3">
+              DEATOX generates weekly meal plans based on your dietary
+              preferences, calorie requirements, and nutrient needs.
+            </p>
+          </div>
+          <div className="w-1/2 border-l border-l-8 border-b-0 border-t-0 border-r-0 p-3 border-[#F9D326] mt-6">
+            <h3 className="w-full text-4xl font-oswald font-bold">
+              ML BASED RECOMMENDATIONS
+            </h3>
+            <p className="w-full font-light mt-3">
+              DEATOX uses machine learning algorithms to learn from your data
+              and improve the accuracy and relevance of its meal and fitness
+              recommendations over time.
+            </p>
+          </div>
+          <div className="w-1/2 border-l border-l-8 border-b-0 border-t-0 border-r-0 p-3 border-[#F9D326] mt-6">
+            <h3 className="w-full text-4xl font-oswald font-bold">
+              FITNESS PLANNING
+            </h3>
+            <p className="w-full font-light mt-3">
+              DEATOX generates weekly fitness plans based on your fitness goals,
+              workout preferences, and fitness level.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="w-auto mx-28 relative z-10 mt-[100px]">
+        <div className="flex flex-row gap-[280px]">
+          <h1 className="text-5xl font-oswald font-extralight flex flex-col text-white font-black">
+            DEATOX <span className="font-light text-[#f3de53]">PACKAGE</span>
+          </h1>
+          <div className="flex flex-col justify-center items-start gap-2">
+            <h4 className="text-[#f3de53] font-bold font-openSans">
+              Get your fitness plan for free!
+            </h4>
+            <p>
+              Join the Deatox community today and start your journey towards a
+              healthier and happier you.{" "}
+            </p>
+            <button className="bg-[#f3de53] text-[#545454] py-2 font-semibold px-4">
+              TRY NOW
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer className="w-full bg-[#545454] flex flex-row justify-between relative z-10 px-12">
+        <div className="w-3/5 h-[400px] bg-[#545454] flex flex-row justify-between items-start px-6 py-12 gap-6">
+          <ul>
+            <li className="mt-2 text-[#f3de53] text-bold text-2xl">COMPANY</li>
+            <li className="mt-2 text-2xl text-normal text-white">About us</li>
+            <li className="mt-2 text-2xl text-normal text-white">Team</li>
+            <li className="mt-2 text-2xl text-normal text-white">Blogs</li>
+            <li className="mt-2 text-2xl text-normal text-white">Meal Plans</li>
+            <li className="mt-2 text-2xl text-normal text-white">
+              Fitness Plans
+            </li>
+          </ul>
+          <ul>
+            <li className="mt-2 text-[#f3de53] text-bold text-2xl">DEATOX +</li>
+            <li className="mt-2 text-2xl text-normal text-white">
+              Partner with us
+            </li>
+            <li className="mt-2 text-2xl text-normal text-white">
+              Enterprise package
+            </li>
+            <li className="mt-2 text-2xl text-normal text-white">Build gym</li>
+            <li className="mt-2 text-2xl text-normal text-white">
+              For enterprise
+            </li>
+            <li className="mt-2 text-2xl text-normal text-white">
+              t&c for business
+            </li>
+          </ul>
+          <ul>
+            <li className="text-[#f3de53] text-bold text-2xl">CONTACT US</li>
+            <li className="text-2xl text-normal text-white">
+              Help and support
+            </li>
+            <li className="text-2xl text-normal text-white">Enquire</li>
+          </ul>
+        </div>
+        <div className="w-1/5 max-w-[400px] h-full self-center">
+          <Image
+            src={"/assets/images/deatox.png"}
+            width={0}
+            height={0}
+            alt={"Deatox"}
+            sizes="100vw"
+            style={{ width: "100%" }}
+          />
+        </div>
+      </footer>
+    </div>
   );
-}
+};
+
+export default page;
