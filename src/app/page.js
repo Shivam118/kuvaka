@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import "./globals.css";
 
 const page = () => {
   return (
@@ -19,10 +20,16 @@ const page = () => {
               height={40}
             />
           </li>
-          <li className={`text-white z-10 mx-4 hidden md:block`}>HOME</li>
-          <li className={`text-white z-10 mx-4 hidden md:block`}>ABOUT</li>
-          <li className={`text-white z-10 mx-4 hidden md:block`}>MEAL PLANS</li>
-          <li className={`text-white z-10 mx-4 hidden md:block`}>
+          <li className={`text-white z-10 mx-4 hidden md:block cursor-pointer`}>
+            HOME
+          </li>
+          <li className={`text-white z-10 mx-4 hidden md:block cursor-pointer`}>
+            ABOUT
+          </li>
+          <li className={`text-white z-10 mx-4 hidden md:block cursor-pointer`}>
+            MEAL PLANS
+          </li>
+          <li className={`text-white z-10 mx-4 hidden md:block cursor-pointer`}>
             WORKOUT ROUTINE
           </li>
         </ul>
@@ -37,9 +44,9 @@ const page = () => {
           </Link>
         </div>
       </navbar>
-      <section className="w-full h-auto min-h-[800px] flex flex-row flex-wrap justify-center items-center px-6 md:px-28 z-10 py-6 relative">
+      <section className="w-full h-auto min-h-[800px] flex flex-row flex-wrap justify-center items-center px-6 md:px-28 z-10 py-6 relative overflow-hidden">
         <div className="w-full md:w-1/2 relative md:-left-48 md:top-0 top-[200px] w-[350px] h-[350px] md:mb-0 mb-[400px]">
-          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32677] w-[680px] h-[680px] -translate-x-1/2 -translate-y-1/2">
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32677] w-[680px] h-[680px] -translate-x-1/2 -translate-y-1/2 z-[5]">
             <Image
               src={"/assets/images/1.png"}
               alt={"circle"}
@@ -48,7 +55,7 @@ const page = () => {
               className="rounded-full absolute top-[450px] left-[420px] z-20"
             />
           </span>
-          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32699] w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2">
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D32699] w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 z-[5]">
             <Image
               src={"/assets/images/2.png"}
               alt={"circle"}
@@ -57,7 +64,7 @@ const page = () => {
               className="rounded-full absolute top-[10px] left-[440px] z-20"
             />
           </span>
-          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326BB] w-[520px] h-[520px] -translate-x-1/2 -translate-y-1/2">
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326BB] w-[520px] h-[520px] -translate-x-1/2 -translate-y-1/2 z-[5]">
             <Image
               src={"/assets/images/3.png"}
               alt={"circle"}
@@ -66,7 +73,7 @@ const page = () => {
               className="rounded-full absolute -top-[100px] left-[180px] z-20"
             />
           </span>
-          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326DD] w-[440px] h-[440px] -translate-x-1/2 -translate-y-1/2">
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326DD] w-[440px] h-[440px] -translate-x-1/2 -translate-y-1/2 z-[5]">
             <Image
               src={"/assets/images/4.png"}
               alt={"circle"}
@@ -75,7 +82,7 @@ const page = () => {
               className="rounded-full absolute top-[400px] left-[100px] z-20"
             />
           </span>
-          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326FF] w-[360px] h-[360px] -translate-x-1/2 -translate-y-1/2">
+          <span className="absolute top-2/4 left-2/4 rounded-full border-8 border-[#F9D326FF] w-[360px] h-[360px] -translate-x-1/2 -translate-y-1/2 z-[5]">
             <Image
               src={"/assets/images/5.png"}
               alt={"circle"}
@@ -90,15 +97,15 @@ const page = () => {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "40%" }}
+            style={{ width: "50%" }}
             className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 z-30"
           />
         </div>
         <div className="w-full md:w-1/2 h-auto">
-          <h1 className="text-[24px] md:text-[64px] text-[#545454] font-oswald font-bold">
+          <h1 className="text-2xl md:text-6xl text-[#545454] font-oswald font-bold">
             CHANGE YOUR HABITS
           </h1>
-          <h1 className="text-[24px] md:text-[64px] text-[#545454] font-oswald font-bold mt-4 md:mt-12">
+          <h1 className="text-2xl md:text-6xl text-[#545454] font-oswald font-bold mt-4 md:mt-12">
             CHANGE YOUR LIFE{" "}
             <span className="text-white text-[14px] md:text-[36px]">
               WITH AI
@@ -174,11 +181,23 @@ const page = () => {
               workout preferences, and fitness level.
             </p>
           </div>
+          <div className="w-full md:w-1/2 p-3 mt-6 flex flex-col gap-4">
+            <h2 className="text-bold md:text-3xl text-lg font-oswald text-[#F9D326]">
+              Get your fitness plan for free!
+            </h2>
+            <p className="md:text-xl text-base">
+              Join the Deatox community today and start your journey towards a
+              healthier and happier you.
+            </p>
+            <button className="bg-[#F9D326] px-3 py-2 w-[100px] md:text-base text-xs">
+              TRY NOW
+            </button>
+          </div>
         </div>
       </section>
-      <section className="w-full px-6 md:px-28 relative z-10 mt-[100px]">
+      <section className="w-full px-6 md:px-28 relative z-10 mt-[100px] bg-[url('/assets/images/cardBg.png')] bg-no-repeat bg-right bg-contain">
         <div className="flex flex-row gap-[80px] md:gap-[280px]">
-          <h1 className="text-xl md:text-5xl font-oswald font-extralight flex flex-col text-white font-black">
+          <h1 className="text-xl md:text-5xl font-oswald font-bold flex flex-col text-white font-black">
             DEATOX <span className="font-light text-[#f3de53]">PACKAGE</span>
           </h1>
           <div className="flex flex-col justify-center items-start gap-2">
@@ -194,9 +213,126 @@ const page = () => {
             </button>
           </div>
         </div>
+        <div className="flex flex-wrap flex-row mt-6 justify-between">
+          <div className="md:w-[422px] h-[450px] md:h-[566px] bg-[#F9D326] relative text-[#545454] flex flex-col items-start justify-center gap-2 md:gap-6 px-12 my-4 py-20 overflow-hidden">
+            <span className="absolute -top-12 -left-12 w-24 h-24 bg-[#545454] rotate-45 border border-white"></span>
+            <span className="absolute top-4 left-4 bg-[#545454] border border-[#F9D326] border-2 rounded-full">
+              <Image
+                src={"/assets/images/deatox-white.png"}
+                alt={"Deatox"}
+                width={38}
+                height={38}
+              />
+            </span>
+            <h4 className="text-lg md:text-2xl text-bold font-oswald text-white">
+              MONTHLY
+            </h4>
+            <h3 className="text-2xl md:text-4xl">$9.99</h3>
+            <hr width="100%" className="border-[#545454] border-2" />
+            <ul className="">
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Customized workout plans
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Access to healthy recipes
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Advanced health tracking tools
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Personalized recommendations based on your goals
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Unlimited customer support
+              </li>
+            </ul>
+            <Link href="/plan" className="w-full">
+              <button className="w-full bg-[#545454] text-xs md:text-base text-white py-2">
+                GET NOW
+              </button>
+            </Link>
+          </div>
+          <div className="md:w-[422px] h-[450px] md:h-[566px] bg-[#F9D326] relative text-[#545454] flex flex-col items-start justify-center gap-2 md:gap-6 px-12 my-4 py-20 overflow-hidden">
+            <span className="absolute -top-12 -left-12 w-24 h-24 bg-[#545454] rotate-45 border border-white"></span>
+            <span className="absolute top-4 left-4 bg-[#545454] border border-[#F9D326] border-2 rounded-full">
+              <Image
+                src={"/assets/images/deatox-white.png"}
+                alt={"Deatox"}
+                width={38}
+                height={38}
+              />
+            </span>
+            <h4 className="text-lg md:text-2xl text-bold font-oswald text-white">
+              YEARLY
+            </h4>
+            <h3 className="text-lg md:text-2xl">
+              <span className="pr-4 text-white text-2xl md:text-4xl relative">
+                <span className="absolute top-4 border border-[#545454] w-10/12"></span>
+                $99.99
+              </span>
+              $99.99
+            </h3>
+            <hr width="100%" className="border-[#545454] border-2" />
+            <ul className="">
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Customized workout plans
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Access to healthy recipes
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Advanced health tracking tools
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Personalized recommendations based on your goals
+              </li>
+              <li className="list-disc ml-6 mt-3 text-xs md:text-base">
+                Unlimited customer support
+              </li>
+            </ul>
+            <Link href="/plan" className="w-full">
+              <button className="w-full bg-[#545454] text-xs md:text-base text-white py-2">
+                GET NOW
+              </button>
+            </Link>
+          </div>
+          <div className="md:w-[422px] h-[450px] md:h-[566px] bg-white relative text-[#545454] flex flex-col justify-center gap-4 md:gap-6 px-12 my-4 py-20 overflow-hidden">
+            <span className="absolute -top-12 -left-12 w-24 h-24 bg-[#F9D326] rotate-45 border border-white"></span>
+            <span className="absolute top-4 left-4 bg-[#545454] border border-[#F9D326] border-2 rounded-full">
+              <Image
+                src={"/assets/images/deatox-white.png"}
+                alt={"Deatox"}
+                width={38}
+                height={38}
+              />
+            </span>
+            <h4 className="text-lg md:text-2xl text-bold font-oswald text-[#545454]">
+              ENTERPRISE
+            </h4>
+            <hr width="100%" className="border-[#F9D326] border-2" />
+            <div className="h-[250px]">
+              <p className="text-xs md:text-base">
+                Looking to offer personalized fitness and meal plans to your
+                employees?
+              </p>
+              <br />
+              <p className="text-xs md:text-base">
+                Our Enterprise Plan brings you the best features.
+              </p>
+            </div>
+            <button className="w-full bg-[#F9D326] text-[#545454] text-xs md:text-base text-white py-2">
+              CONTACT US
+            </button>
+          </div>
+        </div>
       </section>
-      <footer className="w-full bg-[#545454] flex flex-row justify-between relative z-10 px-12">
-        <div className="w-3/5 min-h-[400px] bg-[#545454] flex flex-row justify-between items-start px-6 py-12 gap-6 flex-wrap">
+      <footer
+        className="w-full flex flex-row justify-between relative z-10 px-12 mt-12"
+        style={{
+          background: "linear-gradient(to bottom, transparent 20%, #545454 80%)",
+        }}
+      >
+        <div className="w-3/5 min-h-[400px] flex flex-row justify-between items-start px-6 py-12 gap-6 flex-wrap">
           <ul>
             <li className="mt-2 text-[#f3de53] text-bold text-base md:text-2xl">
               COMPANY
